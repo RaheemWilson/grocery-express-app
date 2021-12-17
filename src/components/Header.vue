@@ -13,7 +13,7 @@
                   <li class="nav-item">Shop</li>
               </ul>
           </nav>
-          <div class="item-number">2</div>
+          <div class="item-number">0</div>
           <div class="header-search-bar">
               <div class="input-bar">
                     <img src="@/assets/search-icon.svg" alt="search icon">

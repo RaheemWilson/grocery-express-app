@@ -21,10 +21,10 @@ export default {
 <style lang="scss">
 @import "./scss/_variables.scss";
 body, html{
-  max-width: 100vw;
   margin: 0;
   padding: 0;
-  
+  height: 100%;
+  min-height: 100%;
 }
 
 #app {
@@ -32,7 +32,7 @@ body, html{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: $black;
-  height: 100%;
+  // height: 100%;
 }
 
 </style>

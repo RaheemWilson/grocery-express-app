@@ -76,6 +76,10 @@ export default {
 @import "@/scss/_variables.scss";
 header{
     padding: $padding;
+    
+    @media (max-width: 1000px){
+        padding: 1rem;
+    }
 }
 
 .header{

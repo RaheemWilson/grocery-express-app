@@ -136,7 +136,7 @@ export default {
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: $padding;
-
+  
   .hero{
     margin-top: 4rem;
     .hero-ad{
@@ -252,6 +252,10 @@ export default {
   margin-top: 4rem;
   padding: $padding;
   background: $light-red;
+
+  @media (max-width: 1000px){
+    padding: 1rem;
+  }
 }
 
 .title{
@@ -437,6 +441,24 @@ export default {
     display: flex;
     gap: 1rem;
   }
+}
+
+.hero-content,
+.what-we-serve-content, 
+.why-choose-us-content, 
+.home-delivery-content{
+  @media (max-width: 1000px){
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    padding: 1rem;
+  }
+}
+
+.why-choose-us-content, .what-we-serve-content{
+  flex-wrap: wrap;
 
 }
+
+
 </style>

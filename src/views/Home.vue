@@ -400,7 +400,7 @@ export default {
     }
 
 
-    .explore-now-btn,{
+    .explore-now-btn{
       border: 1px solid $red;
       border-radius: 8px;
       background: none;

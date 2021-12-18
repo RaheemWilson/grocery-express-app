@@ -20,11 +20,14 @@ export default {
 
 <style lang="scss">
 @import "./scss/_variables.scss";
-body, html{
+html{
+  height: 100%;
+}
+body{
+  width: 100%;
+  max-width: 100%;
   margin: 0;
   padding: 0;
-  height: 100%;
-  min-height: 100%;
 }
 
 #app {

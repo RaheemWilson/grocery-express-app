@@ -456,8 +456,9 @@ export default {
 }
 
 .why-choose-us-content, .what-we-serve-content{
-  flex-wrap: wrap;
-
+  @media (max-width: 1000px) {
+    flex-wrap: wrap;
+  }
 }
 
 

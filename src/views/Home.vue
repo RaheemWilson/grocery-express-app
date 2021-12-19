@@ -62,7 +62,7 @@
           <img src="@/assets/discover.png" alt="Discover photo" class="main-img"/>
           <img src="@/assets/pic-3.svg" alt="Discover card" class="content-card"/>
         </div>
-        <div class="content-container">
+        <!-- <div class="content-container"> -->
           <div class="content-info">
             <div class="title">
               <p>Why choose us</p>
@@ -74,12 +74,12 @@
             </p>
             <button class="explore-now-btn">Explore Now</button>
           </div>
-        </div>
+        <!-- </div> -->
       </div>
     </div>
     <div class="home-delivery-container">
       <div class="home-delivery-content">
-        <div class="content-container">
+        <!-- <div class="content-container"> -->
           <div class="content-info">
             <div class="title">
               <p>Home delivery</p>
@@ -91,7 +91,7 @@
             </p>
             <button class="explore-now-btn">Explore Now</button>
           </div>
-        </div>
+        <!-- </div> -->
         <div class="content-image">
           <img src="@/assets/image-1.svg" alt="Discover photo" class="main-img"/>
         </div>
@@ -380,9 +380,13 @@ export default {
 }
 
 .home-delivery-content{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  // display: grid;
+  // grid-template-columns: 1fr 1fr;
+  // align-items: center;
+
+  display: flex;
   align-items: center;
+  gap: 6rem;
   .main-img{
     width: 36rem;
     justify-content: flex-end;
@@ -447,7 +451,7 @@ export default {
 .what-we-serve-content, 
 .why-choose-us-content, 
 .home-delivery-content{
-  @media (max-width: 1000px){
+  @media (max-width: 1024px){
     display: flex;
     flex-wrap: wrap-reverse;
     justify-content: center;
@@ -456,9 +460,16 @@ export default {
 }
 
 .why-choose-us-content, .what-we-serve-content{
-  @media (max-width: 1000px) {
+  @media (max-width: 1024px) {
     flex-wrap: wrap;
   }
+}
+
+.content-info, .hero-content{
+  @media (max-width: 1024px){
+    margin: 0 auto;
+  }
+     
 }
 
 

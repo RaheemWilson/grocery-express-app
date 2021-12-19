@@ -46,7 +46,7 @@ export default {
  watch: {
     windowWidth(newWidth) {
         console.log(newWidth)
-        this.mobile = newWidth < 1080
+        this.mobile = newWidth < 1296
         
     }
  },
@@ -76,8 +76,8 @@ export default {
 @import "@/scss/_variables.scss";
 header{
     padding: $padding;
-    
-    @media (max-width: 1000px){
+
+    @media (max-width: 1024px){
         padding: 1rem;
     }
 }

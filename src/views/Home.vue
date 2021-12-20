@@ -1,7 +1,7 @@
 <template>
   <div class="main">
-    <div class="hero-content">
-      <div class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
         <div class="hero-ad">
           <p>More than Faster</p>
           <img src="@/assets/image.svg" alt="image"/>
@@ -19,10 +19,7 @@
         </div>
       </div>
       <div class="hero-image">
-        <img src="@/assets/hero-image.svg" alt="Hero image">
-        <img src="@/assets/pic.svg" alt="card" id="pic-1">
-        <img src="@/assets/pic-2.svg" alt="card" id="pic-2">
-        <img src="@/assets/abstract.svg" alt="abstract" id="abstract">
+        <img src="@/assets/HeaderImage.png" alt="Hero image">
       </div>
     </div>
     <div class="what-we-serve-container">
@@ -58,11 +55,6 @@
     </div>
     <div class="why-choose-us-container">
       <div class="why-choose-us-content">
-        <div class="content-image">
-          <img src="@/assets/discover.png" alt="Discover photo" class="main-img"/>
-          <img src="@/assets/pic-3.svg" alt="Discover card" class="content-card"/>
-        </div>
-        <!-- <div class="content-container"> -->
           <div class="content-info">
             <div class="title">
               <p>Why choose us</p>
@@ -74,12 +66,13 @@
             </p>
             <button class="explore-now-btn">Explore Now</button>
           </div>
-        <!-- </div> -->
+        <div class="content-image">
+          <img src="@/assets/discover.png" alt="Discover photo" class="main-img"/>
+        </div>
       </div>
     </div>
     <div class="home-delivery-container">
       <div class="home-delivery-content">
-        <!-- <div class="content-container"> -->
           <div class="content-info">
             <div class="title">
               <p>Home delivery</p>
@@ -91,7 +84,6 @@
             </p>
             <button class="explore-now-btn">Explore Now</button>
           </div>
-        <!-- </div> -->
         <div class="content-image">
           <img src="@/assets/image-1.svg" alt="Discover photo" class="main-img"/>
         </div>
@@ -99,9 +91,6 @@
     </div>
     <div class="sign-up-container">
       <div class="sign-up-content">
-        <div class="content-image">
-          <img src="@/assets/mockup.svg" alt="Discover photo" class="main-img"/>
-        </div>
         <div class="content-info">
           <div class="title">
             <p>Download our app</p>
@@ -114,6 +103,9 @@
             <img src="@/assets/google-play-badge.png" alt="App store">
             <img src="@/assets/app-store-badge.png" alt="App Store">
           </div>
+        </div>
+        <div class="content-image">
+          <img src="@/assets/mockup.svg" alt="Discover photo" class="main-img"/>
         </div>
       </div>
     </div>
@@ -128,17 +120,31 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.main{
-  height: 100%;
+
+.hero-container,
+.what-we-serve-container, 
+.why-choose-us-container, 
+.home-delivery-container,
+.sign-up-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4rem;
+  padding: $padding;
+  background: $light-red;
+  max-width: 100%;
+
+  @media only screen and (max-width: 1000px){
+    margin-top: 2rem;
+    padding: 1rem;
+    flex-wrap: wrap-reverse;
+  }
 }
 
-.hero-content{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: $padding;
-  
-  .hero{
-    margin-top: 4rem;
+.hero-container{
+  background: #fff;
+  .hero-content{
+
     .hero-ad{
       display: flex;
       justify-content: center;
@@ -153,23 +159,21 @@ export default {
         box-shadow: 0px 12px 20px rgba(224, 25, 35, 0.2);
       }
     }
+
     .hero-title{
-      font-size: 4.5rem;
-      font-weight: bolder;
-      line-height: 5.5rem;
-      margin: 1rem 0;
-      span{
-        color: #F54748;
+      font-size: 74px;
+      @media only screen and (max-width: 1200px){
+        font-size: 46px;
       }
     }
 
     .hero-info{
-      width: 30rem;
-      font-size: 1.1rem;
-      line-height: 30px;
-      letter-spacing: 0.5%;
-      margin: 0;
-      padding: 0;
+      font-size: 18px;
+      width: 80%;
+
+      @media only screen and (max-width: 600px){
+        width: 100%;
+      }
     }
 
     .buttons{
@@ -207,73 +211,55 @@ export default {
         p{
           font-size: 20px;
           padding-left: 1rem;
+
+          @media only screen and (max-width: 500px){
+            display: none;
+          }
         }
       }
     }
 
   }
-
   .hero-image{
-    display: flex;
-    justify-content: right;
-    position: relative;
-
-    :not(:first-child){
-      position: absolute;
+    img{
+      width: 40vw;
+      height: 34vw;
+      @media only screen and (max-width: 1024px){
+        width: 80vw;
+        height: 70vw;
+      }
     }
-
-    #pic-1{
-      top: 20%;
-      left: -5%;
-    }
-
-    #pic-2{
-      top: 10%;
-      right: -15%;
-    }
-
-    #abstract{
-      top: 30%;
-      right: -10%;
-      height: 10rem;
-      width: 8rem;
-      transform: rotate(-8.37deg);
-    }
-  }
-}
-
-.what-we-serve-container, 
-.why-choose-us-container, 
-.home-delivery-container,
-.sign-up-container{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 4rem;
-  padding: $padding;
-  background: $light-red;
-
-  @media (max-width: 1000px){
-    padding: 1rem;
   }
 }
 
 .title{
-    text-align: center;
-    p, h1{
-      margin: 0;
-    }
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
 
-    p{
-      color: $red;
-    }
+  @media only screen and (min-width: 1024px){
+    margin: 0 auto;
+    width: 70%;
+  }
 
-    h1{
-      width: 32rem;
-      line-height: 3rem;
-      display: inline-block;
+  p, h1{
+    margin: 0;
+  }
+
+  p{
+    font-size: 18px;
+    color: $red;
+  }
+
+  h1{
+    font-size: 40px;
+
+    @media only screen and (max-width: 600px){
+      font-size: 24px;
     }
   }
+}
 
 .what-we-serve-content{
   padding: 2rem 0;
@@ -284,6 +270,11 @@ export default {
     flex-wrap: wrap;
     gap: 3rem;
     margin: 4rem 0;
+
+    @media only screen and (max-width: 600px){
+      gap: 1rem;
+    }
+
 
     .card{
       display: flex;
@@ -325,44 +316,68 @@ export default {
     }
 
     .card-down{
-      width: 15rem;
-      height: 16rem;
+      @media only screen and (min-width: 1200px){
+        width: 15rem;
+        height: 16rem;
+      }
+      
     }
   }
 }
 
-.why-choose-us-container, .home-delivery-container{
+.why-choose-us-container,
+.home-delivery-container,
+.sign-up-container{
   background: #fff;
+  max-width: 100%;
 
-  .why-choose-us-content{
+  .why-choose-us-content,
+  .home-delivery-content,
+  .sign-up-content{
     display: flex;
     align-items: center;
-    gap: 10rem;
+    flex-direction: row-reverse;
+    gap: 2rem;
+
+    @media only screen and (max-width: 1200px){
+      flex-wrap: wrap-reverse;
+      justify-content: center;
+    }
+
+
     .content-image{
       position: relative;
+
       .main-img{
         width: 34.5rem;
         height: 41rem;
+
+        @media only screen and (max-width: 1024px){
+          width: 80vw;
+          height: 95vw;
+        }
       }
 
-      .content-card{
-        position: absolute;
-        top: 16rem;
-        right: -5rem;
-      }
+
     }
+
     .content-info{
       .title{
-        margin-bottom: 1.5rem;
+        margin: 0;
         text-align: left;
+        width: 100%;
         p{
           color: #03A66B;
         }
         h1{
-          width: 20rem;
+          width: 100%;
         }
       }
 
+      .info{
+        font-size: 18px;
+        width: 80%;
+      }
 
       .explore-now-btn{
         border: none;
@@ -379,98 +394,40 @@ export default {
   }
 }
 
-.home-delivery-content{
-  // display: grid;
-  // grid-template-columns: 1fr 1fr;
-  // align-items: center;
-
-  display: flex;
-  align-items: center;
-  gap: 6rem;
-  .main-img{
-    width: 36rem;
-    justify-content: flex-end;
-  }
-
-  .content-info{
-    .title{
-      text-align: left;
-      h1{
-        width: 30rem;
+.home-delivery-container{
+  .home-delivery-content{
+    flex-direction: row;
+    .content-info{
+      .title{
+        p{
+          color: #F9BA45;
+        }
       }
-      p{
-        color: #F9BA45;
+
+      .explore-now-btn{
+        border: 1px solid $red;
+        border-radius: 8px;
+        background: none;
+        color: $red;
       }
-    }
-
-    .info{
-      width: 30rem;
-    }
-
-
-    .explore-now-btn{
-      border: 1px solid $red;
-      border-radius: 8px;
-      background: none;
-      color: $red;
-      font-size: 1rem;
-      font-weight: $medium;
-      width: 10rem;
-      height: 3rem;
-      margin-top: 1.5rem;
     }
   }
 }
-
 .sign-up-container{
-  padding: 0 7rem;
-  height: 47rem;
-}
+  background: $light-red;
+  .sign-up-content{
+    .content-info{
+      .title{
+        p{
+          color: $red;
+        }
+      }
 
-.sign-up-content{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-
-  .content-info{
-    .title{
-      text-align: left;
-      h1{
-        width: 25rem;
+      .badges{
+        display: flex;
+        gap: 1rem;
       }
     }
   }
-
-  .badges{
-    display: flex;
-    gap: 1rem;
-  }
 }
-
-.hero-content,
-.what-we-serve-content, 
-.why-choose-us-content, 
-.home-delivery-content{
-  @media (max-width: 1024px){
-    display: flex;
-    flex-wrap: wrap-reverse;
-    justify-content: center;
-    padding: 1rem;
-  }
-}
-
-.why-choose-us-content, .what-we-serve-content{
-  @media (max-width: 1024px) {
-    flex-wrap: wrap;
-  }
-}
-
-.content-info, .hero-content{
-  @media (max-width: 1024px){
-    margin: 0 auto;
-  }
-     
-}
-
-
 </style>

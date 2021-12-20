@@ -58,6 +58,10 @@ export default {
 
 footer{
     padding: 3rem 7rem 1rem 7rem;
+
+    @media only screen and (max-width: 900px){
+        padding: 2rem;
+    }
 }
 
 .footer{
@@ -67,10 +71,27 @@ footer{
     padding-bottom: 1rem;
     font-size: 16px;
 
+    @media only screen and (max-width: 900px){
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+    
+    @media only screen and (max-width: 600px){
+        gap: 1rem;
+    }
+
     .links{
         display: grid;
         grid-template-rows: 1fr 2fr;
         align-items: flex-start;
+
+        
+    }
+
+    .logo{
+        @media only screen and (max-width: 600px){
+            grid-template-rows: 1fr 1fr;
+        }
     }
 
     .title{
@@ -111,6 +132,7 @@ footer{
 .rights-reserved{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     color: #676767;
     font-size: 14px;
 

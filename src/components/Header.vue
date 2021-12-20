@@ -45,8 +45,7 @@ export default {
  },
  watch: {
     windowWidth(newWidth) {
-        console.log(newWidth)
-        this.mobile = newWidth < 1296
+        this.mobile = newWidth < 1024
         
     }
  },
@@ -80,13 +79,15 @@ header{
     @media (max-width: 1024px){
         padding: 1rem;
     }
+
+    
 }
 
 .header{
-    display: grid;
-    grid-template-columns: 1fr 3fr;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    position: relative;
+
 
     :last-child(){
         justify-content: right;
@@ -97,8 +98,8 @@ header{
         align-items: center;
 
         img{
-            width: 2.5rem;
-            height: 2.5rem;
+            width: 2.5em;
+            height: 2.5em;
             padding-right: 1rem;
         }
     }

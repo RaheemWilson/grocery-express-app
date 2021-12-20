@@ -22,20 +22,18 @@ export default {
 @import "./scss/_variables.scss";
 
 html {
-  width: 100%;
+  max-width: 100%;
   height: 100%;
-  display: table;
 }
 
 body {
   max-width: 100%;
-  width: 100%;
-  display: table-cell;
 }
 
 html, body {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 #app {

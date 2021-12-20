@@ -24,30 +24,5 @@
 </template>
 
 <style lang="scss" scoped>
-.about{
-  display: flex;
-  gap: 8rem;
-  padding-right: 7rem;
-  
-  img{
-    height: 50rem;
-  }
 
-  .info{
-    text-align: center;
-    h1{
-      color: $red;
-      font-size: 4.5rem;
-    }
-
-    p{
-      width: 45rem;
-      line-height: 2rem;
-    }
-
-    h4{
-      margin-top: 5rem;
-    }
-  }
-}
 </style>

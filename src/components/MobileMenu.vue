@@ -1,7 +1,7 @@
 <template>
-        <div class="hamburger-menu"  @click="handleClick">
-            <img :src="require(`@/assets/${image}.svg`)" alt="Menu bar"/>
-        </div>
+    <div class="hamburger-menu"  @click="handleClick">
+        <img :src="require(`@/assets/${image}.svg`)" alt="Menu bar"/>
+    </div>
      <transition name="slide-fade">
         <div class="nav-responsive" v-if="displayMenu">
             <div class="search-area">
@@ -89,8 +89,8 @@ export default {
     top: 4.5rem;
     left: 0;
     right: 0;
-    height: 50%;
-    padding: 1rem;
+    // height: 50%;
+    padding: 1rem 0;
     :not(:first-child){
         display: flex;
         align-items: center;
@@ -119,6 +119,11 @@ export default {
     justify-content: center;
     color: #fff;
     z-index: 2;
+
+    @media only screen and (max-width: 330px){
+        right: 4px;
+    }
+    
 }
 
 .clear-btn{

@@ -9,8 +9,8 @@
         <h1 class="hero-title">Groceries delivered in as little as <span>2 hours</span></h1>
         <p class="hero-info">Grocen atssures fresh grocery every morning to your family without getting out in this pandemic.</p>
         <div class="buttons">
-          <div class="cta">Order Now</div>
-          <div class="order-process">
+          <div class="cta" role="button" @click="this.$router.push('/shop')">Order Now</div>
+          <div class="order-process" role="button" @click="this.$router.push('/orderprocess')">
             <div class="order-process-btn">
               <img src="@/assets/triangle.svg" alt="image"/>
             </div>
@@ -101,10 +101,10 @@
           </p>
           <div class="badges">
             <a href="https://play.google.com/store/apps/">
-              <img src="@/assets/google-play-badge.png" alt="App store">
+              <img src="@/assets/google-play-badge.png" alt="Get it on Play Store">
             </a>
             <a href="https://www.apple.com/lae/app-store/">
-              <img src="@/assets/app-store-badge.png" alt="App Store">
+              <img src="@/assets/apple-store-badge.svg" alt="Download at App Store">
             </a>
           </div>
         </div>
@@ -153,7 +153,7 @@ export default {
       margin-top: 2rem;
     }
 
-    @media only screen and (max-width: 600px){
+    @media only screen and (max-width:1000px){
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -176,6 +176,10 @@ export default {
 
     .hero-title{
       font-size: 74px;
+
+      span{
+        color: $red;
+      }
       @media only screen and (max-width: 1200px){
         font-size: 46px;
       }
@@ -477,10 +481,16 @@ export default {
 
       .badges{
         display: flex;
+        align-items: center;
         gap: 1rem;
 
         @media only screen and (max-width: 1200px){
           justify-content: center;
+        }
+
+        img{
+          width: 128px;
+          height: 42px;
         }
       }
     }

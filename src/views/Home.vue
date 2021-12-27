@@ -4,7 +4,7 @@
       <div class="hero-content">
         <div class="hero-ad">
           <p>More than Faster</p>
-          <img src="@/assets/image.svg" alt="image"/>
+          <img src="@/assets/strawberry-image.svg" alt="image"/>
         </div>
         <h1 class="hero-title">Groceries delivered in as little as <span>2 hours</span></h1>
         <p class="hero-info">Grocen atssures fresh grocery every morning to your family without getting out in this pandemic.</p>
@@ -67,7 +67,7 @@
             <button class="explore-now-btn">Explore Now</button>
           </div>
         <div class="content-image">
-          <img src="@/assets/discover.png" alt="Discover photo" class="main-img"/>
+          <img src="@/assets/discover.svg" alt="Discover photo" class="main-img"/>
         </div>
       </div>
     </div>
@@ -85,7 +85,7 @@
             <button class="explore-now-btn">Explore Now</button>
           </div>
         <div class="content-image">
-          <img src="@/assets/image-1.svg" alt="Discover photo" class="main-img"/>
+          <img src="@/assets/chef.svg" alt="Discover photo" class="main-img"/>
         </div>
       </div>
     </div>
@@ -100,8 +100,12 @@
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, laboriosam! Suscipit commodi similique ullam minus.
           </p>
           <div class="badges">
-            <img src="@/assets/google-play-badge.png" alt="App store">
-            <img src="@/assets/app-store-badge.png" alt="App Store">
+            <a href="https://play.google.com/store/apps/">
+              <img src="@/assets/google-play-badge.png" alt="App store">
+            </a>
+            <a href="https://www.apple.com/lae/app-store/">
+              <img src="@/assets/app-store-badge.png" alt="App Store">
+            </a>
           </div>
         </div>
         <div class="content-image">
@@ -139,12 +143,22 @@ export default {
     padding: 1rem;
     flex-wrap: wrap-reverse;
   }
+  
 }
 
 .hero-container{
   background: #fff;
   .hero-content{
+    @media only screen and (max-width: 1200px){
+      margin-top: 2rem;
+    }
 
+    @media only screen and (max-width: 600px){
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+    }
     .hero-ad{
       display: flex;
       justify-content: center;
@@ -178,10 +192,11 @@ export default {
 
     .buttons{
       display: flex;
+      align-items: center;
       margin: 2rem 0;
 
       .cta{
-        height: 4.2rem;
+        height: 3.5rem;
         width: 12rem;
         border-radius: 12px;
         background: $red;
@@ -191,6 +206,11 @@ export default {
         align-items: center;
         font-weight: $medium;
         font-size: 1.25rem;
+        @media only screen and (max-width: 600px){
+          height: 3rem;
+          width: 10rem;
+          font-size: 1rem;
+        }
       }
 
       .order-process{
@@ -199,13 +219,17 @@ export default {
         margin-left: 2rem ;
 
         .order-process-btn{
-          width: 4.2rem;
-          height: 4.2rem;
+          width: 3.5rem;
+          height: 3.5rem;
           border-radius: 50%;
           box-shadow: 0px 20px 49px -10px rgba(0, 0, 0, 0.08);
           display: flex;
           justify-content: center;
           align-items: center;
+          @media only screen and (max-width: 600px){
+            height: 3.8rem;
+            width: 3.8rem;
+          }
         }
 
         p{
@@ -238,6 +262,7 @@ export default {
   text-align: center;
   width: 100%;
 
+  
   @media only screen and (min-width: 1024px){
     margin: 0 auto;
     width: 70%;
@@ -245,6 +270,10 @@ export default {
 
   p, h1{
     margin: 0;
+
+    @media only screen and (max-width: 1200px){
+      text-align: center;
+    }
   }
 
   p{
@@ -340,10 +369,9 @@ export default {
     gap: 2rem;
 
     @media only screen and (max-width: 1200px){
-      flex-wrap: wrap-reverse;
       justify-content: center;
+      flex-wrap: wrap-reverse;
     }
-
 
     .content-image{
       position: relative;
@@ -362,6 +390,11 @@ export default {
     }
 
     .content-info{
+      padding-left: 3rem;
+
+      @media only screen and (max-width: 1200px){
+        padding: 0;
+      }
       .title{
         margin: 0;
         text-align: left;
@@ -377,6 +410,11 @@ export default {
       .info{
         font-size: 18px;
         width: 80%;
+
+        @media only screen and (max-width: 1200px){
+          width: 100%;
+          text-align: center;
+        }
       }
 
       .explore-now-btn{
@@ -389,6 +427,11 @@ export default {
         width: 10rem;
         height: 3rem;
         margin-top: 1.5rem;
+
+        @media only screen and (max-width: 1200px){
+          display: block;
+          margin: 0 auto;
+        }
       }
     }
   }
@@ -398,6 +441,7 @@ export default {
   .home-delivery-content{
     flex-direction: row;
     .content-info{
+      padding: 0;
       .title{
         p{
           color: #F9BA45;
@@ -415,7 +459,15 @@ export default {
 }
 .sign-up-container{
   background: $light-red;
+  padding: 0 7rem;
   .sign-up-content{
+
+    .content-image{
+      .main-img{
+        height: auto;
+        filter: drop-shadow(0px 16px 40px rgba(255, 94, 95, 0.12));
+      }
+    }
     .content-info{
       .title{
         p{
@@ -426,6 +478,10 @@ export default {
       .badges{
         display: flex;
         gap: 1rem;
+
+        @media only screen and (max-width: 1200px){
+          justify-content: center;
+        }
       }
     }
   }

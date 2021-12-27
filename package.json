@@ -12,6 +12,7 @@
     "sass": "^1.45.0",
     "sass-loader": "^10.2.0",
     "vue": "^3.0.0",
+    "vue-animate-onscroll": "^1.0.8",
     "vue-router": "^4.0.0-0",
     "vuex": "^4.0.0-0"
   },

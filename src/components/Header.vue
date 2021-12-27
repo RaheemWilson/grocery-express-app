@@ -5,16 +5,14 @@
               <img src="@/assets/logo.svg" alt="App logo"/>
               <h2 class="header-name">Grocery Express</h2>
           </div>
-          <div v-if="mobile">
-              <img src="@/assets/menu_black.svg" alt="Menu bar"/>
-          </div>
+          <MobileMenu v-if="mobile"></MobileMenu>
           <div class="nav-responsive" v-if="!mobile">
             <nav class="header-nav">
                 <ul class="nav-menu">
                     <li class="nav-item"><router-link to="/">Home</router-link></li>
                     <li class="nav-item"><router-link to="/about">About</router-link></li>
-                    <li class="nav-item"><router-link to="/service">Service</router-link></li>
                     <li class="nav-item"><router-link to="/shop">Shop</router-link></li>
+                    <li class="nav-item"><router-link to="/contact">Contact Us</router-link></li>
                 </ul>
             </nav>
             <div class="item-number">0</div>
@@ -34,21 +32,24 @@
 </template>
 
 <script>
+import MobileMenu from '@/components/MobileMenu.vue'
 export default {
- name: "Header",
-
- data(){
-    return{
-        windowWidth: window.innerWidth,
-        mobile: false
-    }
- },
- watch: {
-    windowWidth(newWidth) {
-        this.mobile = newWidth < 1024
-        
-    }
- },
+    name: "Header",
+    components: {
+        MobileMenu
+    },
+    data(){
+        return{
+            windowWidth: window.innerWidth,
+            mobile: false,
+        }
+    },
+    watch: {
+        windowWidth(newWidth) {
+            this.mobile = newWidth < 1200
+            
+        }
+    },
 
     mounted() {
         this.$nextTick(() => {
@@ -64,7 +65,7 @@ export default {
         onResize() {
             this.windowWidth = window.innerWidth
 
-        }
+        },
     }
  
 }
@@ -74,10 +75,15 @@ export default {
 <style lang="scss" scoped>
 @import "@/scss/_variables.scss";
 header{
-    padding: $padding;
+    padding: 0 7rem;
+    background-color: #ffffff;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+    z-index: 1;
 
     @media (max-width: 1024px){
-        padding: 1rem;
+        padding: 0 1rem;
     }
 
     
@@ -87,7 +93,6 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 
     :last-child(){
         justify-content: right;
@@ -101,6 +106,18 @@ header{
             width: 2.5em;
             height: 2.5em;
             padding-right: 1rem;
+            @media only screen and (max-width: 400px){
+                width: 2em;
+                height: 2em;
+                padding-right: 0.5rem;
+            }
+        }
+
+        h2{
+            color: $red;
+            @media only screen and (max-width: 400px){
+                font-size: 1.5rem;
+            }
         }
     }
 
@@ -195,6 +212,13 @@ header{
         }
         
     }
+}
+.hamburger-menu{
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .nav-item{

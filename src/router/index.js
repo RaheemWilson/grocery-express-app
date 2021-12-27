@@ -18,9 +18,9 @@ const routes = [
     component: () => import('../views/Shop.vue')
   },
   {
-    path: '/service',
-    name: 'Service',
-    component: () => import('../views/Service.vue')
+    path: '/contact',
+    name: 'Contact-Form',
+    component: () => import('../views/ContactForm.vue')
   }
 ]
 

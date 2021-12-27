@@ -7,7 +7,8 @@
               <h4 class="name">Grocery Express</h4>
             </div>
             <p class="info">
-                Fast delivery, which is active all over the world, serves with many transportation vehicles.</p>
+                Fast delivery, which is active all over the world, serves with many transportation vehicles.
+                </p>
          </div>
          <div class="links">
             <p class="title">Company</p>
@@ -60,7 +61,7 @@ footer{
     padding: 3rem 7rem 1rem 7rem;
 
     @media only screen and (max-width: 900px){
-        padding: 2rem;
+        padding: 1rem;
     }
 }
 
@@ -77,6 +78,7 @@ footer{
     }
     
     @media only screen and (max-width: 600px){
+        text-align: center;
         gap: 1rem;
     }
 
@@ -84,8 +86,6 @@ footer{
         display: grid;
         grid-template-rows: 1fr 2fr;
         align-items: flex-start;
-
-        
     }
 
     .logo{
@@ -106,6 +106,14 @@ footer{
         img{
             width: 2rem;
             height: 2rem;
+        }
+
+        .name{
+            color: $red;
+        }
+
+        @media only screen and (max-width: 600px){
+            justify-content: center;
         }
     }
 
@@ -139,6 +147,11 @@ footer{
     div{
         display: flex;
         gap: 1rem;
+    }
+
+    @media only screen and (max-width: 600px){
+        flex-wrap: wrap-reverse;
+        justify-content: center;
     }
 }
 

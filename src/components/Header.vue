@@ -40,28 +40,28 @@ export default {
     },
     data(){
         return{
-            windowWidth: window.innerWidth,
-            mobile: this.windowWidth < 1200,
+            // windowWidth: window.innerWidth,
+            mobile: false,
         }
     },
-    watch: {
-        windowWidth(newWidth) {
-            this.mobile = newWidth < 1200
-        }
-    },
+    // watch: {
+    //     windowWidth(newWidth) {
+    //         this.mobile = newWidth < 1200
+    //     }
+    // },
 
     mounted() {
         this.onResize()
-        window.addEventListener('resize', this.onResize);
+        window.addEventListener('resize', this.onResize, { passive: true });
     },
 
-    beforeUnmount() { 
-        window.removeEventListener('resize', this.onResize); 
-    },
+    // beforeUnmount() { 
+    //     window.removeEventListener('resize', this.onResize); 
+    // },
 
     methods: {  
         onResize() {
-            this.windowWidth = window.innerWidth
+           this.mobile = window.innerWidth < 1200
         },
     }
  

@@ -6,7 +6,7 @@
               <h2 class="header-name">Grocery Express</h2>
           </div>
           <MobileMenu v-if="mobile"></MobileMenu>
-          <div class="nav-responsive" v-if="!mobile">
+          <div class="nav-responsive" v-else>
             <nav class="header-nav">
                 <ul class="nav-menu">
                     <li class="nav-item"><router-link to="/">Home</router-link></li>
@@ -41,20 +41,18 @@ export default {
     data(){
         return{
             windowWidth: window.innerWidth,
-            mobile: false,
+            mobile: this.windowWidth < 1200,
         }
     },
     watch: {
         windowWidth(newWidth) {
             this.mobile = newWidth < 1200
-            
         }
     },
 
     mounted() {
-        this.$nextTick(() => {
-            window.addEventListener('resize', this.onResize);
-        })
+        this.onResize()
+        window.addEventListener('resize', this.onResize);
     },
 
     beforeUnmount() { 
@@ -64,7 +62,6 @@ export default {
     methods: {  
         onResize() {
             this.windowWidth = window.innerWidth
-
         },
     }
  

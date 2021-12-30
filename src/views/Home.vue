@@ -9,7 +9,7 @@
         <h1 class="hero-title">Groceries delivered in as little as <span>2 hours</span></h1>
         <p class="hero-info">Grocen atssures fresh grocery every morning to your family without getting out in this pandemic.</p>
         <div class="buttons">
-          <div class="cta" role="button" @click="this.$router.push('/shop')">Order Now</div>
+          <div class="cta" role="button" @click="this.$router.push('/')">Order Now</div>
           <div class="order-process" role="button" @click="this.$router.push('/orderprocess')">
             <div class="order-process-btn">
               <img src="@/assets/triangle.svg" alt="image"/>
@@ -64,7 +64,7 @@
               Lorem ipsum dolor sit amet consectetur adipisicing elit. 
               Aut eos, illo commodi quisquam est vero voluptatibus molestias atque? Assumenda, quaerat?
             </p>
-            <button class="explore-now-btn">Explore Now</button>
+            <button class="explore-now-btn" @click="this.$router.push('/services')">Explore Now</button>
           </div>
         <div class="content-image">
           <img src="@/assets/discover.svg" alt="Discover photo" class="main-img"/>
@@ -82,7 +82,7 @@
               Lorem ipsum dolor sit amet consectetur adipisicing elit. 
               Aut eos, illo commodi quisquam est vero voluptatibus molestias atque? Assumenda, quaerat?
             </p>
-            <button class="explore-now-btn">Explore Now</button>
+            <button class="explore-now-btn" @click="this.$router.push('/contact')">Contact Us</button>
           </div>
         <div class="content-image">
           <img src="@/assets/chef.svg" alt="Discover photo" class="main-img"/>

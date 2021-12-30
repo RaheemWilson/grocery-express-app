@@ -1,5 +1,6 @@
 <template>
   <div class="contact-form-container">
+    <Modal v-if="show"></Modal>
     <div class="business-contact">
       <h2>Get in touch</h2>
       <p>We'd love to hear from you. Our friendly team is here to chat.</p>
@@ -33,23 +34,22 @@
     <div class="contact-us">
       <div class="contact-us-content">
         <h2>Contact us today</h2>
-        <!-- <p>Write us your opinion to make our service better.</p> -->
-        <form method="post" class="contact-form">
+        <form class="contact-form" @submit.prevent="handleSubmit">
           <div>
             <label for="name">Name</label>
-            <input type="text" name="name" id="name">
+            <input type="text" name="name" id="name" required>
           </div>
           <div>
             <label for="email">Email</label>
-            <input type="email" name="email" id="email">
+            <input type="email" name="email" id="email" required>
           </div>
           <div>
-            <label for="name">Phone number</label>
-            <input type="text" name="name" id="name">
+            <label for="telephone">Phone number</label>
+            <input type="telephone" name="telephone" id="telephone" required>
           </div>
           <div>
             <label for="message">How can we help?</label>
-            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+            <textarea name="message" id="message" cols="30" rows="10" required></textarea>
           </div>
           <button type="submit">Send message</button>
         </form>
@@ -57,6 +57,28 @@
     </div>
   </div>
 </template>
+
+<script>
+import Modal from '@/components/Modal.vue'
+export default {
+  name: 'Contact Form',
+  components: { Modal },
+  data(){
+    return {
+      show: false
+    }
+  }, 
+  methods: {
+    handleSubmit(){
+      this.show = true
+
+      setTimeout(() => {
+        this.show = false
+      }, 4000);
+    }
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 

@@ -1,7 +1,7 @@
 <template>
   <header>
       <div class="header">
-          <div class="header-logo">
+          <div class="header-logo" @click="this.$router.push('/')">
               <img src="@/assets/logo.svg" alt="App logo"/>
               <h2 class="header-name">Grocery Express</h2>
           </div>

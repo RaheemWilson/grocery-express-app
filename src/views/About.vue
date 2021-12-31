@@ -4,8 +4,8 @@
       <img src="@/assets/fruits.svg" alt="fruits">
     </div>
     <div class="about-content">
-      <h1 class="title">About Us</h1>
-      <div class="info">
+      <h1 class="title" data-aos="zoom-in" data-aos-duration="800">About Us</h1>
+      <div class="info"  data-aos="fade-right" data-aos-duration="800">
         <p>
           At vero eos et accusamus et iusto odio dignissimos ducimus blanditiis praesen voluptatum deleniti.
           At vero eos et accusamus et iusto odio dignissimos ducimus blanditiis praesen voluptatum deleniti. 

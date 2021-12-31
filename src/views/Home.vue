@@ -2,13 +2,13 @@
   <div class="main">
     <div class="hero-container">
       <div class="hero-content">
-        <div class="hero-ad">
+        <div class="hero-ad"  data-aos="zoom-in" data-aos-duration="800">
           <p>More than Faster</p>
           <img src="@/assets/strawberry-image.svg" alt="image"/>
         </div>
-        <h1 class="hero-title">Groceries delivered in as little as <span>2 hours</span></h1>
-        <p class="hero-info">Grocen atssures fresh grocery every morning to your family without getting out in this pandemic.</p>
-        <div class="buttons">
+        <h1 class="hero-title"  data-aos="zoom-in" data-aos-duration="800">Groceries delivered in as little as <span>2 hours</span></h1>
+        <p class="hero-info" data-aos="zoom-in" data-aos-duration="800">Grocen atssures fresh grocery every morning to your family without getting out in this pandemic.</p>
+        <div class="buttons" data-aos="zoom-in" data-aos-duration="800">
           <div class="cta" role="button" @click="this.$router.push('/')">Order Now</div>
           <div class="order-process" role="button" @click="this.$router.push('/orderprocess')">
             <div class="order-process-btn">
@@ -19,31 +19,31 @@
         </div>
       </div>
       <div class="hero-image">
-        <img src="@/assets/HeaderImage.png" alt="Hero image">
+        <img src="@/assets/HeaderImage.png" alt="Hero image" data-aos="zoom-in" data-aos-duration="800">
       </div>
     </div>
     <div class="what-we-serve-container">
       <div class="what-we-serve-content">
-        <div class="title">
+        <div class="title" data-aos="zoom-in" data-aos-duration="1000">
           <p>What we serve</p>
           <h1>Fruit And Vegetable Delivered To Your Home</h1>
         </div>
         <div class="cards">
-          <div class="card">
+          <div class="card" data-aos="zoom-in-down" data-aos-duration="800">
             <div class="card-content">
               <img class="card-icon" src="@/assets/delivery-icon.svg" alt="icon">
               <p class="card-title">Free shipping</p>
               <p class="card-desc">Enjoy order in a hand using the freshness of groceries</p>
             </div>
           </div>
-          <div class="card">
+          <div class="card" data-aos="zoom-in-down" data-aos-duration="900">
             <div class="card-content card-down">
               <img class="card-icon" src="@/assets/returns-icon.svg" alt="icon">
               <p class="card-title">5 days return</p>
               <p class="card-desc">If you get rotten items - return immediately to us.</p>
             </div>
           </div>
-          <div class="card">
+          <div class="card" data-aos="zoom-in-down" data-aos-duration="800">
             <div class="card-content">
               <img class="card-icon" src="@/assets/secure-icon.svg" alt="icon">
               <p class="card-title">Secure checkout</p>
@@ -55,7 +55,7 @@
     </div>
     <div class="why-choose-us-container">
       <div class="why-choose-us-content">
-          <div class="content-info">
+          <div class="content-info" data-aos="fade-left" data-aos-duration="800">
             <div class="title">
               <p>Why choose us</p>
               <h1>Find Favorites And Discover New Ones</h1>
@@ -66,14 +66,14 @@
             </p>
             <button class="explore-now-btn" @click="this.$router.push('/services')">Explore Now</button>
           </div>
-        <div class="content-image">
+        <div class="content-image" data-aos="zoom-in" data-aos-duration="800">
           <img src="@/assets/discover.svg" alt="Discover photo" class="main-img"/>
         </div>
       </div>
     </div>
     <div class="home-delivery-container">
       <div class="home-delivery-content">
-          <div class="content-info">
+          <div class="content-info" data-aos="fade-right" data-aos-duration="800">
             <div class="title">
               <p>Home delivery</p>
               <h1>Sit at Home We Will Take Care Your Order</h1>
@@ -84,14 +84,14 @@
             </p>
             <button class="explore-now-btn" @click="this.$router.push('/contact')">Contact Us</button>
           </div>
-        <div class="content-image">
+        <div class="content-image" data-aos="zoom-in" data-aos-duration="800">
           <img src="@/assets/chef.svg" alt="Discover photo" class="main-img"/>
         </div>
       </div>
     </div>
     <div class="sign-up-container">
       <div class="sign-up-content">
-        <div class="content-info">
+        <div class="content-info" data-aos="zoom-in" data-aos-duration="1000">
           <div class="title">
             <p>Download our app</p>
             <h1>Get The Groceries App Order More Easily.</h1>
@@ -108,7 +108,7 @@
             </a>
           </div>
         </div>
-        <div class="content-image">
+        <div class="content-image" data-aos="zoom-in-up" data-aos-duration="800">
           <img src="@/assets/mockup.svg" alt="Discover photo" class="main-img"/>
         </div>
       </div>

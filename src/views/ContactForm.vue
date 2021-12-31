@@ -1,7 +1,7 @@
 <template>
   <div class="contact-form-container">
     <Modal v-if="show"></Modal>
-    <div class="business-contact">
+    <div class="business-contact" data-aos="fade-right" data-aos-duration="800">
       <h2>Get in touch</h2>
       <p>We'd love to hear from you. Our friendly team is here to chat.</p>
       <div class="contact-details">

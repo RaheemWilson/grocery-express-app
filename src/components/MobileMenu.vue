@@ -77,6 +77,7 @@ export default {
     top: 4rem;
     left: 0;
     right: 0;
+    z-index: -1;
     :not(:first-child){
         display: flex;
         align-items: center;

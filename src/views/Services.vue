@@ -1,10 +1,10 @@
 <template>
     <div class="services-container">
-        <h1 class="services-title">Our Services</h1>
+        <h1 class="services-title" data-aos="zoom-in" data-aos-duration="800">Our Services</h1>
         <div class="services-content">
             <div class="service">
-                <img src="@/assets/farming.jpg" alt="Farming">
-                <div>
+                <img src="@/assets/farming.jpg" alt="Farming" data-aos="fade-right" data-aos-duration="800">
+                <div data-aos="fade-left" data-aos-duration="800">
                     <h2>We produce organic fruits and vegetables</h2>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
                         Modi ipsa tempore corrupti quae ut aliquam deleniti beatae molestiae cum consequuntur!
@@ -12,17 +12,17 @@
                 </div>
             </div>
             <div class="service">
-                <div>
+                <div data-aos="fade-left" data-aos-duration="800">
                     <h2>We do fast delivery</h2>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
                         Modi ipsa tempore corrupti quae ut aliquam deleniti beatae molestiae cum consequuntur!
                     </p>
                 </div>
-                <img src="@/assets/delivery.jpg" alt="Delivery">
+                <img src="@/assets/delivery.jpg" alt="Delivery" data-aos="fade-right" data-aos-duration="800">
             </div>
             <div class="service">
-                <img src="@/assets/payment.jpg" alt="Payment">
-                <div>
+                <img src="@/assets/payment.jpg" alt="Payment" data-aos="fade-right" data-aos-duration="800">
+                <div data-aos="fade-left" data-aos-duration="800">
                     <h2>We provide secured payment options</h2>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
                         Modi ipsa tempore corrupti quae ut aliquam deleniti beatae molestiae cum consequuntur!

@@ -7,12 +7,17 @@
 <script>
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 export default {
  name: "App",
  components: {
    Header,
    Footer
+ },
+ created(){
+   AOS.init()
  }
 }
 </script>

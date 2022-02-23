@@ -78,6 +78,7 @@ header{
     .header-logo{
         display: flex;
         align-items: center;
+        cursor: pointer;
 
         img{
             width: 2.5em;
